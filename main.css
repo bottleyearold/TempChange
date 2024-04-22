@@ -1,0 +1,103 @@
+body{
+    background-color: #b8cbe0;
+}
+
+
+
+.content-area {
+    display: flex;
+    flex-direction: row-reverse; /* Switches the order */
+    justify-content: space-between;
+}
+
+.graph-area {
+    width: 66.66%; /* Adjust width as needed */
+}
+.polar-bear-area{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align children to the left */
+    justify-content: flex-start; /* Align children to the top */
+    width: 33.33%; /* Adjust width as needed */
+    padding: 20px;
+    margin: 0;
+
+}
+
+.graph-area {
+    padding-right: 10px;
+}
+
+.polar-bear-area {
+    padding-left: 20px;
+}
+
+.control-group {
+    display: inline-block;
+    width: calc(50% - 10px);
+}
+
+.control-group-right {
+    padding-right: 5px;
+}
+
+.control-group-left {
+    padding-left: 5px;
+}
+
+.countdown {
+    border: 2px solid #000;
+    align-items: center; /* Center children horizontally */
+    background-color: #da7d88; /* Your desired background color */
+    color: #000; /* Set a text color that contrasts with the background */
+    font-size: 30px; /* Adjust if necessary */
+    text-align: center; /* Center text horizontally */
+    padding: 10px;
+    font-family: Arial, sans-serif; /* Optional: your desired font */
+}
+
+
+ .navbar {
+    background-color: #132c48ff !important; 
+}
+.nav-link {
+    color: white !important; 
+}
+.nav-link:hover {
+    color: #bc8cbaff !important; 
+}
+.navbar-bottom {
+    background-color: #132c48ff !important;
+}
+
+.countdown-container {
+    text-align: center; /* This centers the content */
+    /* Other styling you might want, such as padding or margins */
+}
+.countdown-title {
+    /* ... your existing styles ... */
+    margin-bottom: 0; /* Reducing space below the title */
+
+    text-align: center;
+    white-space: nowrap;
+}
+
+.countDOWN{
+    display: inline-block; /* Aligns the countdown to center if it's inline */
+    margin: auto;
+    font-size: 40px;
+}
+.countdown-description {
+    /* Rest of your styles */
+    text-align: center;
+    margin: auto; /* Only if the description is a block-level element */
+}
+/* .navbar-bottom .navbar-collapse {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+} */
+/* .navbar-bottom .nav-item {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}  */
