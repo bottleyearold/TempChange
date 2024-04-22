@@ -4,7 +4,6 @@ from dash import Dash, dcc, html, Input, Output
 import plotly.express as px
 import plotly.graph_objs as go
 from datetime import datetime, timedelta
-import math
 import dash_bootstrap_components as dbc
 
 # Load the dataset
