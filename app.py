@@ -26,6 +26,8 @@ data_tidy = pd.melt(data_cleaned, id_vars=['country'], var_name='year', value_na
 # Remove 'F' from year
 data_tidy['year'] = data_tidy['year'].str.replace('F', '')
 
+
+# Calculate the end date from the start date
 end_date = datetime(2029, 7, 21, 12, 0, 0)
 
 year_columns = [col for col in data2 if col.startswith('F')]
@@ -93,10 +95,10 @@ navbar = html.Div(
         dbc.NavbarBrand("Information and Statistics", href="#", style={"color": "white", "width": "100%", "display": "block", "textAlign": "center", "padding-bottom": "8px", "padding-top": "10px","font-size": "20px", 'font-weight': '500'}),
         dbc.Nav(
             [
-                dbc.NavItem(dbc.NavLink("Overview", href="https://finaldd2-3.onrender.com/", style= {"padding-left": "35px", "padding-right": "35px"})),
-                dbc.NavItem(dbc.NavLink("Result of Climate Change", href="https://resultsofclimatechange.onrender.com/", style= {"padding-left": "35px", "padding-right": "35px"})),
-                dbc.NavItem(dbc.NavLink("Temperature Change", href="https://tempchange-5.onrender.com/", style= {"padding-left": "35px", "padding-right": "35px"})),
-                dbc.NavItem(dbc.NavLink("More References", href="https://finaldd2-3.onrender.com/Reference.html", style= {"padding-left": "35px", "padding-right": "35px"})),
+                dbc.NavItem(dbc.NavLink("Overview", href="#", style= {"padding-left": "35px", "padding-right": "35px"})),
+                dbc.NavItem(dbc.NavLink("Result of Climate Change", href="#", style= {"padding-left": "35px", "padding-right": "35px"})),
+                dbc.NavItem(dbc.NavLink("Temperature Change", href="https://finaldashboard-4.onrender.com", style= {"padding-left": "35px", "padding-right": "35px"})),
+                dbc.NavItem(dbc.NavLink("More References", href="MoreReference.html", style= {"padding-left": "35px", "padding-right": "35px"})),
             ],
             className="ms-auto",
             navbar=True,
@@ -221,7 +223,6 @@ def update_figure(selected_country, selected_year):
 def update_countdown(n):
     # Calculate the time difference between now and the end date
     time_left = end_date - datetime.now()
-
     if time_left.total_seconds() < 0:
         time_left = timedelta(0)
 
@@ -230,6 +231,12 @@ def update_countdown(n):
     seconds = time_left.seconds
     hours, remainder = divmod(seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
+
+    # Calculate years and remaining days
+    years, remaining_days = divmod(days, 365)
+
+    # Adjust for leap years (approximately, without being exact)
+
 
     # Format the countdown display
     return html.Div(
