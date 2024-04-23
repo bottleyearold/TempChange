@@ -26,7 +26,10 @@ data_tidy = pd.melt(data_cleaned, id_vars=['country'], var_name='year', value_na
 # Remove 'F' from year
 data_tidy['year'] = data_tidy['year'].str.replace('F', '')
 
-end_date = datetime(2029, 7, 21, 12, 0, 0)
+start_date = datetime(2024, 4, 22, 12, 0)
+
+# Calculate the end date from the start date
+end_date = start_date + timedelta(days=(5 * 365) + 91, minutes=0)
 
 year_columns = [col for col in data2 if col.startswith('F')]
 years = [int(col.replace('F', '')) for col in year_columns]
