@@ -206,7 +206,7 @@ def update_figure(selected_country, selected_year):
 
     # Now, create the figure with the filtered data.
     fig = px.bar(filtered_data, x='year', y='temperature_change', color='country',
-                  title='Climate Change per Country and Year')
+                  title='Mean Annual Temperature Change per Country and Year')
 
     fig.update_layout(
         xaxis_title='Years',
