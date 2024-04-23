@@ -126,7 +126,7 @@ app.layout = html.Div([
             # Controls (Dropdown and Slider) placed side by side
             html.Div([
                 html.Div([
-                    html.Label('Dropdown'),
+                    html.Label('Select'),
                     dcc.Dropdown(
                         id='country-dropdown',
                         options=[{'label': i, 'value': i} for i in np.sort(data_tidy['country'].unique())],
@@ -136,7 +136,6 @@ app.layout = html.Div([
                 ], className='control-group control-group-right'),
 
                 html.Div([
-                    html.Label('Slider'),
                     dcc.RangeSlider(
                         id='year-range-slider',
                         min=int(data_tidy['year'].min()),
