@@ -95,10 +95,10 @@ navbar = html.Div(
         dbc.NavbarBrand("Information and Statistics", href="#", style={"color": "white", "width": "100%", "display": "block", "textAlign": "center", "padding-bottom": "8px", "padding-top": "10px","font-size": "20px", 'font-weight': '500'}),
         dbc.Nav(
             [
-                dbc.NavItem(dbc.NavLink("Overview", href="#", style= {"padding-left": "35px", "padding-right": "35px"})),
-                dbc.NavItem(dbc.NavLink("Result of Climate Change", href="#", style= {"padding-left": "35px", "padding-right": "35px"})),
+                dbc.NavItem(dbc.NavLink("Overview", href="https://finaldd2-3.onrender.com/", style= {"padding-left": "35px", "padding-right": "35px"})),
+                dbc.NavItem(dbc.NavLink("Result of Climate Change", href="https://resultsofclimatechange.onrender.com/", style= {"padding-left": "35px", "padding-right": "35px"})),
                 dbc.NavItem(dbc.NavLink("Temperature Change", href="https://tempchange-7.onrender.com", style= {"padding-left": "35px", "padding-right": "35px"})),
-                dbc.NavItem(dbc.NavLink("More References", href="MoreReference.html", style= {"padding-left": "35px", "padding-right": "35px"})),
+                dbc.NavItem(dbc.NavLink("More References", href="https://finaldd2-3.onrender.com/Reference.html", style= {"padding-left": "35px", "padding-right": "35px"})),
             ],
             className="ms-auto",
             navbar=True,
