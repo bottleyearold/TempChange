@@ -73,7 +73,7 @@ sliders = [dict(
 # Update the layout of the choropleth map
 fig_choropleth.update_layout(
     sliders=sliders,
-    title=f'Global Annual Surface Temperature Change',
+    title=f'Global Annual Surface Temperature Change °C',
     geo=dict(
         showframe=False,
         showcoastlines=False,
