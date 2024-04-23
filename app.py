@@ -126,7 +126,6 @@ app.layout = html.Div([
             # Controls (Dropdown and Slider) placed side by side
             html.Div([
                 html.Div([
-                    html.Label('Select'),
                     dcc.Dropdown(
                         id='country-dropdown',
                         options=[{'label': i, 'value': i} for i in np.sort(data_tidy['country'].unique())],
